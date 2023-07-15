@@ -1,0 +1,21 @@
+header,
+main,
+footer {
+    /* 800px plotis pasirinktas pagal dizainą, kiek pločio reikia pačiam dizainui */
+    width: 800px;
+    /* calc naudojamas tam, kad galėtume isscentruoti elementus naudojant skirtingus matavimus vienetus - px ir % */
+    margin-left: calc((100% - 800px) / 2);
+}
+
+header {
+    margin-top: 100px;
+    background-color: lightblue;
+}
+
+main {
+    background-color: lightcoral;
+}
+
+footer {
+    background-color: lightgoldenrodyellow;
+}
