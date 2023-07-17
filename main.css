@@ -1,15 +1,65 @@
+body,
+body * {
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    /* border box - tam, kad elemento plotis skaiciuotis kartu su visais aplink ji esanciais elementais (border, padding..) */
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 header,
 main,
 footer {
     /* 800px plotis pasirinktas pagal dizainą, kiek pločio reikia pačiam dizainui */
     width: 800px;
     /* calc naudojamas tam, kad galėtume isscentruoti elementus naudojant skirtingus matavimus vienetus - px ir % */
-    margin-left: calc((100% - 800px) / 2);
+    margin: 30px calc((100% - 800px) / 2);
+    /* display flex - veikia tik tevui ir 1 lvl vaikam */
+    display: flex;
 }
 
 header {
-    background-color: lightblue;
+    justify-content: space-between;
+    align-items: center;
 }
+
+img {
+    height: 30px;
+    width: 200px;
+    /* object-fit - tai kaip paveikslelio dydis turetu buti koreguojamas pagal savo konteinerio dydi */
+    object-fit: contain;
+    object-position: left;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+a:hover {
+    color: red;
+}
+
+/*
+
+a {
+    margin-left: 20px;
+}
+
+a:first-child {
+    margin-left: 0;
+} */
 
 main {
     background-color: lightcoral;
